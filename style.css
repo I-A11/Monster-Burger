@@ -1,11 +1,14 @@
 /* global */
 @import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;600;700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --mainChenin: #e5cb7a;
   --mainGreen: #32c704;
   --mainYellow: #f9ff94;
-  --mainRed: #eb2b15;
+  --mainRed: #ce1d09;
   --mainBean: #450101;
   --mainWhite: #fff;
   --mainBlack: #1f1f1f;
@@ -29,6 +32,16 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+/* header */
+#header {
+  background: url("./images/hero-img.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-attachment: fixed;
 }
 
 /* navbar */
@@ -62,6 +75,11 @@ nav li {
 nav a {
   color: var(--mainChenin);
   font-size: 1.2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--mainRed);
 }
 
 .nav-toggle {
@@ -78,7 +96,10 @@ nav a {
   height: 250px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
+  nav {
+    background: transparent;
+  }
   .nav-toggle {
     display: none;
   }
@@ -124,4 +145,44 @@ nav a {
   nav {
     padding: 20px 3px;
   }
+}
+
+/* banner section */
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.banner h1 {
+  color: var(--mainWhite);
+  font-size: 2.5rem;
+  padding-bottom: 4rem;
+}
+.monster {
+  color: var(--mainRed);
+}
+.burger {
+  color: var(--mainGreen);
+}
+
+.btn {
+  color: var(--mainWhite);
+  border: var(--mainRed) 1px solid;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 15rem;
+  height: 4rem;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 10px;
+  letter-spacing: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+  background: var(--mainRed);
+  color: var(--mainYellow);
 }
