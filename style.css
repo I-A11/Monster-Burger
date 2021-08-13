@@ -42,8 +42,20 @@ a {
   background-repeat: no-repeat;
   width: 100%;
   background-attachment: fixed;
+  opacity: 0.9;
 }
 
+@media screen and (max-width: 600px) {
+  #header {
+    background: url("./images/hero-img.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vh;
+    background-attachment: relative;
+    opacity: 0.9;
+  }
+}
 /* navbar */
 
 nav {
@@ -153,7 +165,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  min-height: calc(100vh - 71px);
 }
 
 .banner h1 {
@@ -184,5 +196,73 @@ nav a:hover {
 
 .btn:hover {
   background: var(--mainRed);
-  color: var(--mainYellow);
+  color: var(--mainBean);
+}
+
+@media screen and (max-width: 760px) {
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* about section */
+.about {
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  padding: 10rem 5rem;
+}
+
+.about-container {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  padding: 3rem;
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--mainRed);
+  margin-bottom: 3rem;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-btn {
+  text-align: center;
+  color: var(--mainGreen);
+  border: var(--mainRed) 1px solid;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 10px 15px;
+  letter-spacing: 2px;
+  width: 15rem;
+  justify-self: center;
+  transition: all 0.5s ease-in-out;
+}
+.about-btn:hover {
+  background: var(--mainRed);
+  color: var(--mainBean);
+}
+.about-img {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  padding: 2rem;
+}
+.about img {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
