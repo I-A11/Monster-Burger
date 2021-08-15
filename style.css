@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+.wrapper {
+  display: grid;
+}
+
 /* header */
 #header {
   background: url("./images/hero-img.jpg");
@@ -191,7 +195,7 @@ nav a:hover {
   text-align: center;
   padding-top: 10px;
   letter-spacing: 2px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
 
 .btn:hover {
@@ -212,9 +216,9 @@ nav a:hover {
 
 /* about section */
 .about {
-  height: 600px;
+  height: 700px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding: 10rem 5rem;
 }
 
@@ -249,7 +253,7 @@ nav a:hover {
   letter-spacing: 2px;
   width: 15rem;
   justify-self: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
 .about-btn:hover {
   background: var(--mainRed);
@@ -264,5 +268,10 @@ nav a:hover {
 .about img {
   width: 100%;
   border-radius: 10px;
-  overflow: hidden;
+}
+
+@media screen and (max-width: 960px) {
+  .about {
+    height: 1000px;
+  }
 }
