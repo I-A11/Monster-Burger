@@ -316,7 +316,7 @@ footer {
   display: grid;
   background: var(--mainBlack);
   color: var(--mainWhite);
-  height: 110px;
+  height: 150px;
   text-align: center;
   justify-items: center;
   align-items: center;
