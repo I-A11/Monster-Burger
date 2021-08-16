@@ -213,13 +213,17 @@ nav a:hover {
     font-size: 1.5rem;
   }
 }
+@media screen and (max-width: 460px) {
+  .banner h1 {
+    font-size: 1.2rem;
+  }
+}
 
 /* about section */
 .about {
-  height: 700px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  padding: 10rem 5rem;
+  padding: 3rem;
 }
 
 .about-container {
@@ -270,8 +274,40 @@ nav a:hover {
   border-radius: 10px;
 }
 
-@media screen and (max-width: 960px) {
-  .about {
-    height: 1000px;
+.images {
+  background: var(--mainChenin);
+  display: grid;
+  grid-gap: 20px;
+  padding: 3rem;
+  grid-template-areas:
+    "burger-2 chicken-1"
+    "burger-2 burger-1";
+}
+
+.burger-1 {
+  grid-area: burger-1;
+  width: 100%;
+  border-radius: 5px;
+  align-self: center;
+}
+.burger-2 {
+  grid-area: burger-2;
+  width: 100%;
+  border-radius: 5px;
+  align-self: center;
+}
+.chicken-1 {
+  grid-area: chicken-1;
+  width: 100%;
+  border-radius: 5px;
+  align-self: center;
+}
+
+@media screen and (max-width: 895px) {
+  .images {
+    grid-template-areas:
+      "burger-2"
+      " chicken-1"
+      "burger-1";
   }
 }
