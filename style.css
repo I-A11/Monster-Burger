@@ -311,3 +311,14 @@ nav a:hover {
       "burger-1";
   }
 }
+
+footer {
+  display: grid;
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+  height: 110px;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
