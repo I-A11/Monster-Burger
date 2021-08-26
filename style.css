@@ -39,24 +39,22 @@ a {
 }
 
 /* header */
+
 #header {
   background: url("./images/hero-img.jpg");
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  max-width: 100%;
-  background-attachment: fixed;
   opacity: 0.9;
 }
 
-@media screen and (max-width: 600px) {
+@media (min-width: 40em) {
   #header {
     background: url("./images/hero-img.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* width: 100%; */
-    background-attachment: relative;
+    max-width: 100%;
+    background-attachment: fixed;
     opacity: 0.9;
   }
 }
